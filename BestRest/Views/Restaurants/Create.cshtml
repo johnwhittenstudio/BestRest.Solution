@@ -4,7 +4,7 @@
 
 @model BestRest.Models.Restaurant
 
-<h4>Add a new restaurant</h4>
+<h2>Add a new Restaurant</h2>
 
 @using (Html.BeginForm())
 {
@@ -19,7 +19,6 @@
 
   @Html.LabelFor(model => model.Cuisine)
   @Html.DropDownList("CuisineId")
-
-  <input type="submit" value="Add new restaurant" class="btn btn-default" />
+  <button type="submit" class="btn btn-primary" style="width:250px">Add New Restaurants</button>
 }
 <p>@Html.ActionLink("Show all restaurants", "Index")</p>

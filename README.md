@@ -28,24 +28,42 @@ A website where users can add their favorite restaurants based on the type of cu
 
 
 ### Clone the project
-
 - Open the terminal on your local computer.
 - Navigate to the parent directory of your preference.
-- Clone this project using `$ git clone https://github.com/johnwhittenstudio/bestrest.solution`
-- Navigate to the directory: ```$ cd top name directory```
+- Clone this project using `$ git clone https://github.com/ebruri/bestrest.solution`
+- Navigate to the directory: ```$ cd BestRest.Solution```
 - Open in Vs code: ```$ code .```
-- Navigate to BestRest: ```$ cd BestRest``` and create 
-- 
-- Run: ```$ dotnet restore```
 
+### Import and connect the database
+- Launch the MySQL server with the command ```mysql -uroot -p[YOUR-PASSWORD-HERE]```
+- After the server starts running, open MySQL Workbench.
+- Select the MySQL instance in the _MySQLConnections_ section.
+- Select the **Navigator>Administration** tab.
+- In the Navigator>Administration window, select **Data Import/Restore**; the Data Import window will open.
+- In the **Import Options** section of the Data Import window, select **Import from Self-Contained File**.
+- Click the dots at the end of the **Import from Self-Contained** file field (three dots for windows, two dots for Mac) and a pop up box will open. In the pop up box, navigate to the ```ebru_rice.sql``` file in the root directory of the project (BestRest.Solution/). Once correct file is selected, click open. The pop up box will close itself.
+- In the **Default Schema to be Imported To**, select the **New** button. 
+- In the pop up box, name the schema ```ebru_rice```. Click **Ok**.
+- Navigate to the tab called **Import Progress** and click **Start Import** at the bottom right corner of the window.
+- After you are finished with the above steps, reopen the **Navigator > Schemas** tab. Right click and select **Refresh All**. Your new test database will appear.
+- Navigate to BestRest: ```$ cd BestRest``` and type the following command in the terminal ```$ touch appsettings.json```
+- Navigate to the appsettings.json file ```$ cd appsettings.json``` and enter:
+```
+{
+    "ConnectionStrings": {
+        "DefaultConnection": "Server=localhost;Port=3306;database=to_do_list;uid=root;pwd=[YOUR-PASSWORD-HERE];"
+    }
+}
+```
 
-
+### Run the project
+- Navigate to BestRest: ```$ cd BestRest``` and type the following command in the terminal ```$ dotnet restore```
+- Run the program in the console with the command ```$ dotnet run```
 
 ## Known Bugs
 - _None._
 
 ## License
-
 [MIT License](https://opensource.org/licenses/MIT) © 2022 _Ebru Rice, Jack Skelton, and John Whitten_
 
 ## Contact

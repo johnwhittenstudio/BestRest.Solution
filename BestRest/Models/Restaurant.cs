@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace BestRest.Models
 {
   public class Restaurant
