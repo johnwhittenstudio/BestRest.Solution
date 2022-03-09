@@ -41,7 +41,7 @@ A website where users can add their favorite restaurants based on the type of cu
 - Select the **Navigator>Administration** tab.
 - In the Navigator>Administration window, select **Data Import/Restore**; the Data Import window will open.
 - In the **Import Options** section of the Data Import window, select **Import from Self-Contained File**.
-- Click the dots at the end of the **Import from Self-Contained** file field (three dots for windows, two dots for Mac) and a pop up box will open. In the pop up box, navigate to the ```john_whitten.sql``` file in the root directory of the project (BestRest.Solution/). Once correct file is selected, click open. The pop up box will close itself.
+- Click the dots at the end of the **Import from Self-Contained** file field (three dots for windows, two dots for Mac) and a pop up box will open. In the pop up box, navigate to the ```best_rest.sql``` file in the root directory of the project (BestRest.Solution/). Once correct file is selected, click open. The pop up box will close itself.
 - In the **Default Schema to be Imported To**, select the **New** button. 
 - In the pop up box, name the schema ```best_rest```. Click **Ok**.
 - Navigate to the tab called **Import Progress** and click **Start Import** at the bottom right corner of the window.
